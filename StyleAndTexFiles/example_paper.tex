@@ -258,7 +258,7 @@ Sparse representations of image data are widely used and recognized in the field
 
 \textbf{Ways to induce sparsity in images :}
 
-Sparse approximation problem is a highly researched topic with efficient algorithms to solve this problem in place . We list some of the most commonly used algorithms :
+Sparse approximation problem is a highly researched topic with efficient algorithms to solve this problem in place. We list some of the most commonly used algorithms :
 
 1.	\emph{Projected Gradient Descent} [10]: 
 
@@ -266,19 +266,19 @@ This is similar to normal gradient descent where the gradient shows the directio
 
 2.	\emph{ LASSO } [11] :
 
-This regression analysis method is widely used along with its multiple variations. It solves the L1 norm version of the sparse approximation method . Fused Lasso ,Group Lasso [12] and other variations are used for generating sparsity.
+This regression analysis method is widely used along with its multiple variations. It solves the L1 norm version of the sparse approximation method. Fused Lasso, Group Lasso [12] and other variations are used for generating sparsity.
 
 3.	\emph{Proximal Methods} :
 
-Proximal methods including proximal gradient descent is also used for induced sparsity in images .With thresholding /hard thresholding , the sparsity induced by this method forms the basis for many classification experiments.
+Proximal methods including proximal gradient descent is also used for induced sparsity in images. With thresholding/hard thresholding, the sparsity induced by this method forms the basis for many classification experiments.
 
 \textbf{Analysis of Sparsity on images :}
 
-To understand the effect of sparsity, we need to refer to the hard baked filters that are applied on patches of data. These filters as explained in the section above are concentric filters applies on pixels that in turn produce rotation equivariance. This method relies on the pattern of pixels on which the filter is applied. Now as we induce sparsity, some or most of the pixels are reduced to 0. Now, even though the pixels might not be relevant for image classification , this hinders the basic property of the pattern in the patches that the harmonic filters rely on. Hence the hard baked filters which learn in a constrained manner are not able to produce rotation equivariant features. 
+To understand the effect of sparsity, we need to refer to the hard baked filters that are applied on patches of data. These filters as explained in the section above are concentric filters applied on pixels that in turn produce rotation equivariance. This method relies on the pattern of pixels on which the filter is applied. Now as we induce sparsity, some or most of the pixels are reduced to 0. Now, even though the pixels might not be relevant for image classification, this hinders the basic property of the pattern in the patches that the harmonic filters rely on. Hence the hard baked filters which learn in a constrained manner are not able to produce rotational equivariant features. 
 
-We can visualize this with reference to fig 5.  where the harmonic paths are applied on a patch. Now , if we decrease the values of pixels to 0 , the purpose of the harmonic filter is defeated as with some removed pixel values , the filters do not apply on the similar kind of images as they have been trained on. As a result, in terms of cross correlation , the cross correlation value of the rotated sparse image is not a multiple of the cross correlation of the original image. Hence , the classification isn’t accurate. 
+We can visualize this with reference to fig 5.  where the harmonic paths are applied on a patch. Now, if we decrease the values of pixels to 0, the purpose of the harmonic filter is defeated as with some removed pixel values, the filters do not apply on the similar kind of images as they have been trained on. As a result, in terms of cross correlation, the cross correlation value of the rotated sparse image is not a multiple of the cross correlation of the original image. Hence, the classification is not accurate. 
 
-As this adversely affects the filters, the increase in sparsity should cause rapid decrease in performance of the classifier. Now, it can be observed that since these constraints are not present in the normal CNN filters , this massive decrease in performance is not observed in the case of normal convolutions. The constrained filters which produce rotation equivariance are also the cause for the decrease in accuracy of classification for harmonic convolutions .
+As this adversely affects the filters, the increase in sparsity should cause rapid decrease in performance of the classifier. Now, it can be observed that since these constraints are not present in the normal CNN filters, this massive decrease in performance is not observed in the case of normal convolutions. The constrained filters which produce rotation equivariance are also the cause for the decrease in accuracy of classification for harmonic convolutions.
 
 \textbf{Experimental setup:}
  
@@ -294,7 +294,7 @@ Similar to experiments with noise, we have kept two standard observations for co
 
 \textbf{Experimental Results:}
 
-As expected, there is a steep decline in the performance of the harmonic filters on increase in sparsity. With higher levels of sparsity, the filters perform poorly and lose their rotation equivariance property. Further on extremely high values of sparsity it is observed that due to the constrained filters in harmonic networks, the accuracy falls even below CNN on rotated ,sparse images. This stands as a testimony to the adverse effect of sparsity in harmonic networks.
+As expected, there is a steep decline in the performance of the harmonic filters on increase in sparsity. With higher levels of sparsity, the filters perform poorly and lose their rotation equivariance property. Further on extremely high values of sparsity it is observed that due to the constrained filters in harmonic networks, the accuracy falls even below CNN on rotated, sparse images. This stands as a testimony to the adverse effect of sparsity in harmonic networks.
 
 \subsection{Quality}
 
